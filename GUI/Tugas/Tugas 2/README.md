@@ -10,3 +10,4 @@ Penjelasan
 2. Daftar Tampilan menggunakan item View List View 
 3. NIM, NAMA, JURUSAN, dan No. Telp itu menggunakan Display Widget Label dengan font MS Shell Dlg 2 dengan font style Bold dan menggunakan Size 10
 4. TAMBAH, EDIT, CLEAR, HAPUS mrnggunakan Button PushButton dengan menggunakan font MS Shell Dlg 2 dengan font style Bold dan menggunakan Size 8
+5. untuk menampilkan hasil dari inputan saya menggunakan List View
