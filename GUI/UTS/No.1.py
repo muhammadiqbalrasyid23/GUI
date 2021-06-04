@@ -34,11 +34,14 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
+
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
+
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(210, 413, 41, 16))
         self.label_3.setObjectName("label_3")
+
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(210, 440, 61, 16))
         self.label_4.setObjectName("label_4")
@@ -110,6 +113,34 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "CLEAR"))
         self.pushButton_4.setText(_translate("MainWindow", "HAPUS"))
 
+    def addButtonClick(self):
+        self.listWidget.addItem(
+            self.lineEdit.text() + ' - ' +
+            self.lineEdit_2.text() + ' - ' +
+            self.lineEdit_3.text() + ' - ' +
+            self.lineEdit_4.text())
+
+    def editButtonClick(self):
+        if self.listWidget.currentRow() < 0: return
+        self.entryForm = EntryForm()
+        s = str(self.listWidget.currentItem().text())
+        idx = s.index('-')
+        self.entryForm.nim.setText(s[:(idx - 1)])
+        self.entryForm.nama.setText(s[(idx - 2):])
+        self.entryForm.jurusan.setText(s[(idx - 3):])
+        self.entryForm.telp.setText(s[(idx - 4):])
+
+        if self.entryForm.exec_() == QDialog.Accepted:
+            self.listWidget.currentItem().setText(
+                self.entryForm.nim.text() + ' - ' +
+                self.entryForm.nama.text() + ' - ' +
+                self.entryForm.jurusan.text() + ' - ' +
+                self.entryForm.telp.text())
+
+    def deleteButtonClick(self):
+        row = self.listWidget.currentRow()
+        if row >= 0:
+            self.listWidget.takeItem(row)
 
 if __name__ == "__main__":
     import sys
