@@ -5,5 +5,5 @@
 
 #NO 2
 
-program yang terdapat di Saol itu terdapat error di bagian 'tab' membuat program tidak bisa di jalankan seharusnya itu itu tidak boleh menggunakan Tab 
+program yang terdapat di Soal itu terdapat error di bagian 'tab' membuat program tidak bisa di jalankan seharusnya itu itu tidak boleh menggunakan Tab 
 
