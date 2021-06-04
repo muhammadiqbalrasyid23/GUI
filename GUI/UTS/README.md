@@ -5,5 +5,6 @@
 
 #NO 2
 
+![Screenshot_2](https://user-images.githubusercontent.com/72425140/120766613-9bf67380-c544-11eb-9c53-524e022bd848.jpg)
 program yang terdapat di Soal itu terdapat error di bagian 'tab' membuat program tidak bisa di jalankan seharusnya itu itu tidak boleh menggunakan Tab 
 
